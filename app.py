@@ -3,9 +3,11 @@ from tkinter.messagebox import showinfo
 import paho.mqtt.client as paho
 import time 
 
+#define our MQTT connection
+
 class MQTTconnect:
 	def __init__(self):
-		broker="172.20.10.13"
+		broker="172.20.10.13"  #IP Address of Raspberry Pi
 		# broker="localhost"
 		port=1883
 		self.client1= paho.Client("test")
@@ -33,6 +35,7 @@ class AppFrame(Frame):
 		super().__init__(container)
 		param={'padx':5,'pady':5,'ipadx':5,'ipady':5}
 		
+		#initialize LED flags
 		self.i_flag=[False]
 		self.j_flag=[False]
 		self.k_flag=[False]

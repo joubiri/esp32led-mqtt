@@ -10,13 +10,13 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-ssid = 'chev akil'
-password = 'joubir123'
+#setup wifi connection and broker IP address
+ssid = 'wifi_name'
+password = 'password'
 mqtt_server = '172.20.10.13'
-#EXAMPLE IP ADDRESS
-#mqtt_server = '192.168.1.144'
 client_id = ubinascii.hexlify(machine.unique_id())
 
+#topics to subscribe to
 topic_sub1=b"led1"
 topic_sub2=b"led2"
 topic_sub3=b"led3"
@@ -27,6 +27,7 @@ station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect(ssid, password)
 
+#testing ESP32 wifi connection
 while station.isconnected() == False:
   pass
 
