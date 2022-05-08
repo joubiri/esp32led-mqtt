@@ -49,24 +49,24 @@ class AppFrame(Frame):
 		self.ledlabel1=Label(self, text='LED 1')
 		self.ledlabel1.grid(column=0,row=0, sticky=W, **param)
 		self.buttonled1=Button(self,text='Toggle LED')
-		self.buttonled1['command']= lambda: [self.i_flag.__setitem__(0,flag.reverse(self.i_flag[0])),self.send2ESP()]
+		self.buttonled1['command']= lambda: [self.i_flag.__setitem__(0,Flag.reverse(self.i_flag[0])),self.send2ESP()]
 		self.buttonled1.grid(column=1,row=0,sticky=W, **param)
 
 		self.ledlabel2=Label(self, text='LED 2')
 		self.ledlabel2.grid(column=0,row=1, sticky=W, **param)
 		self.buttonled2=Button(self,text='Toggle LED')
-		self.buttonled2['command']=lambda: [self.j_flag.__setitem__(0,flag.reverse(self.j_flag[0])),self.send2ESP()]
+		self.buttonled2['command']=lambda: [self.j_flag.__setitem__(0,Flag.reverse(self.j_flag[0])),self.send2ESP()]
 		self.buttonled2.grid(column=1,row=1,sticky=W, **param)
 
 		self.ledlabel3=Label(self, text='LED 3')
 		self.ledlabel3.grid(column=0,row=2, sticky=W, **param)
 		self.buttonled3=Button(self,text='Toggle LED')
-		self.buttonled3['command']=lambda: [self.k_flag.__setitem__(0,flag.reverse(self.k_flag[0])),self.send2ESP()]
+		self.buttonled3['command']=lambda: [self.k_flag.__setitem__(0,Flag.reverse(self.k_flag[0])),self.send2ESP()]
 		self.buttonled3.grid(column=1,row=2,sticky=W, **param)
 
 		self.ledlabel4=Label(self, text='LED 4')
 		self.ledlabel4.grid(column=0,row=3, sticky=W, **param)
-		self.buttonled4=Button(self,text='Toggle LED',command=lambda: [self.l_flag.__setitem__(0,flag.reverse(self.l_flag[0])),
+		self.buttonled4=Button(self,text='Toggle LED',command=lambda: [self.l_flag.__setitem__(0,Flag.reverse(self.l_flag[0])),
 		self.send2ESP()])
 		self.buttonled4.grid(column=1,row=3,sticky=W, **param)
 
