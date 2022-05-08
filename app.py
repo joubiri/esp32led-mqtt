@@ -21,7 +21,7 @@ class MQTTconnect:
 		print("data passed")
 		pass
 
-class flag:
+class Flag:
 	@staticmethod
 	def reverse(b):
 		return not b
