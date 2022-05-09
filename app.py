@@ -75,28 +75,28 @@ class AppFrame(Frame):
 
 	def send2ESP(self):
 		c=MQTTconnect()
-		if self.i_flag[0]==True:
+		if self.i_flag[0] is True:
 			print("data 'ON' sent to LED1")
 			c.senddata('led1',1)
 		else:
 			print("data 'OFF' sent to LED1")
 			c.senddata('led1',0)
 
-		if self.j_flag[0]==True:
+		if self.j_flag[0] is True:
 			print("data 'ON' sent to LED2")
 			c.senddata('led2',1)
 		else:
 			print("data 'OFF' sent to LED2")
 			c.senddata('led2',0)
 
-		if self.k_flag[0]==True:
+		if self.k_flag[0] is True:
 			print("data 'ON' sent to LED3")
 			c.senddata('led3',1)
 		else:
 			print("data 'OFF' sent to LED3")
 			c.senddata('led3',0)
 
-		if self.l_flag[0]==True:
+		if self.l_flag[0] is True:
 			print("data 'ON' sent to LED4")
 			c.senddata('led4',1)
 		else:
